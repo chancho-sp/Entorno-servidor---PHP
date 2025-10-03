@@ -26,7 +26,7 @@
 
         public function getPrecioConIVA (){
             $precioIVA = $this->precio*(1+self::VAT);
-            return $precioIVA;
+            return number_format($precioIVA, 2);
         }
  
         public function getNumero (){
@@ -37,4 +37,5 @@
             echo '<br>Título: ' . $this->titulo . ' Precio: ' . $this->precio . ' Precio sin IVA. Número: ' . $this->numero;
         }
 }
+
 ?>
